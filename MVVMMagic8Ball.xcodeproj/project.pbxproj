@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		25A2139B26F4ED2200D85498 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2139A26F4ED2200D85498 /* main.swift */; };
 		25A213A326F4EFE400D85498 /* Magic8Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A226F4EFE400D85498 /* Magic8Ball.swift */; };
+		25A213A526F4F31A00D85498 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A426F4F31A00D85498 /* Session.swift */; };
+		25A213A926F4F5FF00D85498 /* AdviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A826F4F5FF00D85498 /* AdviceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		25A2139726F4ED2200D85498 /* MVVMMagic8Ball */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MVVMMagic8Ball; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A2139A26F4ED2200D85498 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		25A213A226F4EFE400D85498 /* Magic8Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic8Ball.swift; sourceTree = "<group>"; };
+		25A213A426F4F31A00D85498 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		25A213A826F4F5FF00D85498 /* AdviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +63,9 @@
 		25A2139926F4ED2200D85498 /* MVVMMagic8Ball */ = {
 			isa = PBXGroup;
 			children = (
+				25A213A726F4F53E00D85498 /* ViewModels */,
+				25A213A626F4F52300D85498 /* Views */,
 				25A213A126F4EFC100D85498 /* Model */,
-				25A2139A26F4ED2200D85498 /* main.swift */,
 			);
 			path = MVVMMagic8Ball;
 			sourceTree = "<group>";
@@ -69,8 +74,25 @@
 			isa = PBXGroup;
 			children = (
 				25A213A226F4EFE400D85498 /* Magic8Ball.swift */,
+				25A213A426F4F31A00D85498 /* Session.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		25A213A626F4F52300D85498 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25A2139A26F4ED2200D85498 /* main.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		25A213A726F4F53E00D85498 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				25A213A826F4F5FF00D85498 /* AdviceViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A213A926F4F5FF00D85498 /* AdviceViewModel.swift in Sources */,
 				25A2139B26F4ED2200D85498 /* main.swift in Sources */,
 				25A213A326F4EFE400D85498 /* Magic8Ball.swift in Sources */,
+				25A213A526F4F31A00D85498 /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,9 @@
 
 import Foundation
 
+//make an instance of the view model to store questions and advice
+var advisor = AdviceViewModel()
+
 // Program name
 print("MAGIC 8 BALL")
 print("============")
@@ -28,5 +31,4 @@ print("You said: \(input)")
 print("")
 
 // Provide the advice by making an instance of the Magic8Ball type and then getting a response
-let advisor = Magic8Ball()
-print(advisor.getResponse())
+print(advisor.provideResponseFor(givenQuery: input))

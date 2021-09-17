@@ -9,7 +9,7 @@ import Foundation
 
 struct Magic8Ball {
     
-    func getResponse() -> String {
+    static func getResponse() -> String {
         
         let responses = [
             "It is certain",
