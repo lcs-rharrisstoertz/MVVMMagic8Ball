@@ -32,3 +32,10 @@ print("")
 
 // Provide the advice by making an instance of the Magic8Ball type and then getting a response
 print(advisor.provideResponseFor(givenQuery: input))
+
+//Iterate over all past sessions
+for priorSession in advisor.sessions {
+    print(priorSession.question)
+    print(priorSession.response)
+}
+//do you want to see a list of prior sessions and answers have them choose 1 or 2
