@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25A2139B26F4ED2200D85498 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2139A26F4ED2200D85498 /* main.swift */; };
+		25A213A326F4EFE400D85498 /* Magic8Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A226F4EFE400D85498 /* Magic8Ball.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		25A2139726F4ED2200D85498 /* MVVMMagic8Ball */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MVVMMagic8Ball; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A2139A26F4ED2200D85498 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		25A213A226F4EFE400D85498 /* Magic8Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic8Ball.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,18 @@
 		25A2139926F4ED2200D85498 /* MVVMMagic8Ball */ = {
 			isa = PBXGroup;
 			children = (
+				25A213A126F4EFC100D85498 /* Model */,
 				25A2139A26F4ED2200D85498 /* main.swift */,
 			);
 			path = MVVMMagic8Ball;
+			sourceTree = "<group>";
+		};
+		25A213A126F4EFC100D85498 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25A213A226F4EFE400D85498 /* Magic8Ball.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A2139B26F4ED2200D85498 /* main.swift in Sources */,
+				25A213A326F4EFE400D85498 /* Magic8Ball.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
