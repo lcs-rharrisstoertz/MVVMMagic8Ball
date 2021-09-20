@@ -10,14 +10,14 @@ import Foundation
 class AdviceViewModel {
     
     // History of advice sessions
-    var sessions: [Session] = [] //empty array to star
+    var sessions: [Session] = [] //empty array to start
     
     
     //given a question, provide some advice
     func provideResponseFor(givenQuery: String) -> String {
         
         //start an advice session
-        var currentSession = Session(question: input)
+        var currentSession = Session(question: givenQuery)
         
         //Use the static function right from the Magic8Ball type (no instance required)
         currentSession.response = Magic8Ball.getResponse()
