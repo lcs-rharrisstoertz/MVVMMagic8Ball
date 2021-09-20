@@ -11,6 +11,10 @@
 		25A213A326F4EFE400D85498 /* Magic8Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A226F4EFE400D85498 /* Magic8Ball.swift */; };
 		25A213A526F4F31A00D85498 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A426F4F31A00D85498 /* Session.swift */; };
 		25A213A926F4F5FF00D85498 /* AdviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A826F4F5FF00D85498 /* AdviceViewModel.swift */; };
+		25A213B126F9096300D85498 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213B026F9096300D85498 /* iOSApp.swift */; };
+		25A213B326F9096300D85498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213B226F9096300D85498 /* ContentView.swift */; };
+		25A213B526F9096E00D85498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A213B426F9096E00D85498 /* Assets.xcassets */; };
+		25A213B826F9096E00D85498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A213B726F9096E00D85498 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,15 +30,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		25A2139726F4ED2200D85498 /* MVVMMagic8Ball */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MVVMMagic8Ball; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A2139726F4ED2200D85498 /* macOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = macOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A2139A26F4ED2200D85498 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		25A213A226F4EFE400D85498 /* Magic8Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic8Ball.swift; sourceTree = "<group>"; };
 		25A213A426F4F31A00D85498 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		25A213A826F4F5FF00D85498 /* AdviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewModel.swift; sourceTree = "<group>"; };
+		25A213AE26F9096300D85498 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A213B026F9096300D85498 /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		25A213B226F9096300D85498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		25A213B426F9096E00D85498 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25A213B726F9096E00D85498 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		25A2139426F4ED2200D85498 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25A213AB26F9096300D85498 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,7 +63,9 @@
 		25A2138E26F4ED2200D85498 = {
 			isa = PBXGroup;
 			children = (
-				25A2139926F4ED2200D85498 /* MVVMMagic8Ball */,
+				25A213BC26F909B100D85498 /* Shared */,
+				25A2139926F4ED2200D85498 /* macOS */,
+				25A213AF26F9096300D85498 /* iOS */,
 				25A2139826F4ED2200D85498 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,19 +73,18 @@
 		25A2139826F4ED2200D85498 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25A2139726F4ED2200D85498 /* MVVMMagic8Ball */,
+				25A2139726F4ED2200D85498 /* macOS */,
+				25A213AE26F9096300D85498 /* iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		25A2139926F4ED2200D85498 /* MVVMMagic8Ball */ = {
+		25A2139926F4ED2200D85498 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				25A213A726F4F53E00D85498 /* ViewModels */,
 				25A213A626F4F52300D85498 /* Views */,
-				25A213A126F4EFC100D85498 /* Model */,
 			);
-			path = MVVMMagic8Ball;
+			path = macOS;
 			sourceTree = "<group>";
 		};
 		25A213A126F4EFC100D85498 /* Model */ = {
@@ -95,12 +112,48 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		25A213AF26F9096300D85498 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				25A213B026F9096300D85498 /* iOSApp.swift */,
+				25A213BD26F909EA00D85498 /* Views */,
+				25A213B426F9096E00D85498 /* Assets.xcassets */,
+				25A213B626F9096E00D85498 /* Preview Content */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		25A213B626F9096E00D85498 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				25A213B726F9096E00D85498 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		25A213BC26F909B100D85498 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				25A213A126F4EFC100D85498 /* Model */,
+				25A213A726F4F53E00D85498 /* ViewModels */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		25A213BD26F909EA00D85498 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25A213B226F9096300D85498 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		25A2139626F4ED2200D85498 /* MVVMMagic8Ball */ = {
+		25A2139626F4ED2200D85498 /* macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25A2139E26F4ED2200D85498 /* Build configuration list for PBXNativeTarget "MVVMMagic8Ball" */;
+			buildConfigurationList = 25A2139E26F4ED2200D85498 /* Build configuration list for PBXNativeTarget "macOS" */;
 			buildPhases = (
 				25A2139326F4ED2200D85498 /* Sources */,
 				25A2139426F4ED2200D85498 /* Frameworks */,
@@ -110,10 +163,27 @@
 			);
 			dependencies = (
 			);
-			name = MVVMMagic8Ball;
+			name = macOS;
 			productName = MVVMMagic8Ball;
-			productReference = 25A2139726F4ED2200D85498 /* MVVMMagic8Ball */;
+			productReference = 25A2139726F4ED2200D85498 /* macOS */;
 			productType = "com.apple.product-type.tool";
+		};
+		25A213AD26F9096300D85498 /* iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25A213BB26F9096E00D85498 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildPhases = (
+				25A213AA26F9096300D85498 /* Sources */,
+				25A213AB26F9096300D85498 /* Frameworks */,
+				25A213AC26F9096300D85498 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOS;
+			productName = iOS;
+			productReference = 25A213AE26F9096300D85498 /* iOS.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -126,6 +196,9 @@
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					25A2139626F4ED2200D85498 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					25A213AD26F9096300D85498 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -143,10 +216,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				25A2139626F4ED2200D85498 /* MVVMMagic8Ball */,
+				25A2139626F4ED2200D85498 /* macOS */,
+				25A213AD26F9096300D85498 /* iOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25A213AC26F9096300D85498 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25A213B826F9096E00D85498 /* Preview Assets.xcassets in Resources */,
+				25A213B526F9096E00D85498 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		25A2139326F4ED2200D85498 /* Sources */ = {
@@ -157,6 +243,15 @@
 				25A2139B26F4ED2200D85498 /* main.swift in Sources */,
 				25A213A326F4EFE400D85498 /* Magic8Ball.swift in Sources */,
 				25A213A526F4F31A00D85498 /* Session.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25A213AA26F9096300D85498 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25A213B326F9096300D85498 /* ContentView.swift in Sources */,
+				25A213B126F9096300D85498 /* iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +395,69 @@
 			};
 			name = Release;
 		};
+		25A213B926F9096E00D85498 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = W4R3WPMQ2T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.rowanharrisstoertz.iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25A213BA26F9096E00D85498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = W4R3WPMQ2T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.rowanharrisstoertz.iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -312,11 +470,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25A2139E26F4ED2200D85498 /* Build configuration list for PBXNativeTarget "MVVMMagic8Ball" */ = {
+		25A2139E26F4ED2200D85498 /* Build configuration list for PBXNativeTarget "macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25A2139F26F4ED2200D85498 /* Debug */,
 				25A213A026F4ED2200D85498 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25A213BB26F9096E00D85498 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25A213B926F9096E00D85498 /* Debug */,
+				25A213BA26F9096E00D85498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
