@@ -15,6 +15,9 @@
 		25A213B326F9096300D85498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213B226F9096300D85498 /* ContentView.swift */; };
 		25A213B526F9096E00D85498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A213B426F9096E00D85498 /* Assets.xcassets */; };
 		25A213B826F9096E00D85498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A213B726F9096E00D85498 /* Preview Assets.xcassets */; };
+		25A213BE26F90E0000D85498 /* Magic8Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A226F4EFE400D85498 /* Magic8Ball.swift */; };
+		25A213BF26F90E0000D85498 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A426F4F31A00D85498 /* Session.swift */; };
+		25A213C026F90E0000D85498 /* AdviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A826F4F5FF00D85498 /* AdviceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -250,6 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A213BE26F90E0000D85498 /* Magic8Ball.swift in Sources */,
+				25A213BF26F90E0000D85498 /* Session.swift in Sources */,
+				25A213C026F90E0000D85498 /* AdviceViewModel.swift in Sources */,
 				25A213B326F9096300D85498 /* ContentView.swift in Sources */,
 				25A213B126F9096300D85498 /* iOSApp.swift in Sources */,
 			);
