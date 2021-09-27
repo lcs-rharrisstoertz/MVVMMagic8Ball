@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct MVVMMagic8BallApp: App {
-    @SceneBuilder var body: some Scene {
+    
+    //Make an instance of the view model to store questions and advice
+    @StateObject private var advisor = AdviceViewModel()
+    
+    var body: some Scene {
         WindowGroup {
             
             TabView{
                 NavigationView {
-                    ContentView()
+                    ContentView(advisor: advisor)
                 }
                 .tabItem {
                     Image(systemName: "questionmark.circle")

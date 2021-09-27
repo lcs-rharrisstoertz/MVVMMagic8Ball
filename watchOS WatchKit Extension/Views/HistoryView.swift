@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct HistoryView: View {
+    // Make an instance of the view model to store questions and advice
+    @ObservedObject var advisor: AdviceViewModel()
+    
+    // Stores the current question being asked
+    @State private var input = ""
+    
+    // Stores the response to the given question
+    @State private var output = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        // Show the list of questions and responses
+        List(advisor.sessions.reversed()) { session in
+            VStack(alignment: .leading) {
+                Text(session.question)
+                    .bold()
+                Text(session.response)
+            }
+        }
+        .padding()
+        .navigationTitle("History")
     }
+    
 }
 
 struct HistoryView_Previews: PreviewProvider {
