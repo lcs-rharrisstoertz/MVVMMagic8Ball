@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2508F76127024BB60008EBC5 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508F76027024BB60008EBC5 /* HistoryView.swift */; };
 		25A2139B26F4ED2200D85498 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2139A26F4ED2200D85498 /* main.swift */; };
 		25A213A326F4EFE400D85498 /* Magic8Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A226F4EFE400D85498 /* Magic8Ball.swift */; };
 		25A213A526F4F31A00D85498 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A213A426F4F31A00D85498 /* Session.swift */; };
@@ -85,6 +86,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2508F75E27024BB60008EBC5 /* watchOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "watchOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		2508F75F27024BB60008EBC5 /* watchOS WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "watchOS WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		2508F76027024BB60008EBC5 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		25A2139726F4ED2200D85498 /* macOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = macOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A2139A26F4ED2200D85498 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		25A213A226F4EFE400D85498 /* Magic8Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic8Ball.swift; sourceTree = "<group>"; };
@@ -135,6 +139,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2508F75D270248EC0008EBC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25A213D826F911C700D85498 /* ContentView.swift */,
+				2508F76027024BB60008EBC5 /* HistoryView.swift */,
+				2508F75E27024BB60008EBC5 /* watchOS-Bridging-Header.h */,
+				2508F75F27024BB60008EBC5 /* watchOS WatchKit App-Bridging-Header.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		25A2138E26F4ED2200D85498 = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				25A213D626F911C700D85498 /* MVVMMagic8BallApp.swift */,
-				25A213D826F911C700D85498 /* ContentView.swift */,
+				2508F75D270248EC0008EBC5 /* Views */,
 				25A213DA26F911C700D85498 /* NotificationController.swift */,
 				25A213DC26F911C700D85498 /* NotificationView.swift */,
 				25A213DE26F911C800D85498 /* ComplicationController.swift */,
@@ -366,9 +381,11 @@
 					};
 					25A213C226F911B800D85498 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					25A213C526F911B900D85498 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					25A213D026F911C700D85498 = {
 						CreatedOnToolsVersion = 13.0;
@@ -468,6 +485,7 @@
 				25A213D926F911C700D85498 /* ContentView.swift in Sources */,
 				25A213DF26F911C800D85498 /* ComplicationController.swift in Sources */,
 				25A213D726F911C700D85498 /* MVVMMagic8BallApp.swift in Sources */,
+				2508F76127024BB60008EBC5 /* HistoryView.swift in Sources */,
 				25A213DD26F911C700D85498 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,6 +777,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W4R3WPMQ2T;
@@ -766,12 +785,19 @@
 				IBSC_MODULE = watchOS_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "watchOS WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.rowanharrisstoertz.watchOS.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "watchOS WatchKit Extension/Views/watchOS WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
@@ -784,6 +810,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W4R3WPMQ2T;
@@ -791,12 +818,18 @@
 				IBSC_MODULE = watchOS_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "watchOS WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.rowanharrisstoertz.watchOS.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "watchOS WatchKit Extension/Views/watchOS WatchKit App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
@@ -807,13 +840,21 @@
 		25A213F026F911CE00D85498 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W4R3WPMQ2T;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.rowanharrisstoertz.watchOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "watchOS WatchKit Extension/Views/watchOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -821,13 +862,20 @@
 		25A213F126F911CE00D85498 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W4R3WPMQ2T;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.rowanharrisstoertz.watchOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "watchOS WatchKit Extension/Views/watchOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
