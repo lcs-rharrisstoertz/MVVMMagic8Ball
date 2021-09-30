@@ -10,13 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     // Make an instance of the view model to store questions and advice
-    @StateObject private var advisor = AdviceViewModel()
+    @StateObject var advisor = AdviceViewModel()
 
     // Stores the current question being asked
-    @State private var input = ""
+    @State var input = ""
     
     // Stores the response to the given question
-    @State private var output = ""
+    @State var output = ""
     
     var body: some View {
         VStack {
@@ -50,17 +50,6 @@ struct ContentView: View {
             
             // Advice given
             Text(output)
-            
-            // Show the list of questions and responses
-            List(advisor.sessions.reversed()) { session in
-                VStack(alignment: .leading) {
-                    Text(session.question)
-                        .bold()
-                    Text(session.response)
-                }
-            }
-                        
-            Spacer()
         }
         .padding()
         .navigationTitle("Magic 8 Ball")

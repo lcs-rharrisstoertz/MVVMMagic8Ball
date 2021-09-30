@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     // Make an instance of the view model to store questions and advice
-    @ObservedObject var advisor: AdviceViewModel()
+    @ObservedObject var advisor = AdviceViewModel()
 
     // Stores the current question being asked
     @State private var input = ""
@@ -43,8 +43,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(advisor: advisor)
+//    }
+//}
